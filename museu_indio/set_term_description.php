@@ -18,7 +18,7 @@ $taxonomy = $taxonomy[0];
 
 $terms = $termsRepo->fetch(['posts_per_page' => -1],$taxonomy);
 
-
+#Csv file with terms description
 $file = fopen('classificacao2.csv', 'r');
 
 while (($data = fgetcsv($file, 0, ",")) == TRUE){
