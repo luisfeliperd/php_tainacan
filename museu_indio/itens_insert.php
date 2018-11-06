@@ -6,7 +6,7 @@ $_SERVER['REQUEST_METHOD'] = "GET";
 
 define( 'WP_USE_THEMES', false );
 define( 'SHORTINIT', false );
-require('/var/www/html/wordpress/wp-blog-header.php'); #Diretório do Wordpress
+require( 'C:\wamp\www\wordpress\wp-blog-header.php' );
 
 #Generating object instances for Collection, Metadata, Items, and Item_Metadata
 $collectionsRepo = \Tainacan\Repositories\Collections::get_instance();
@@ -19,7 +19,7 @@ $collection = $collectionsRepo->fetch(['name'=>'Museu do Índio'], 'OBJECT');
 $collection = $collection[0];
 
 
-$fh = fopen("itens.csv", "r") or die("ERROR OPENING DATA");
+$fh = fopen("itens_teste.csv", "r") or die("ERROR OPENING DATA");
 
 while (($data = fgetcsv($fh, 0, ",")) == TRUE){
 	$linecount++;
@@ -29,7 +29,7 @@ fclose($fh);
 
 #Getting metadata title from csv array
 
-if (($handle = fopen("itens.csv", "r")) == TRUE) {
+if (($handle = fopen("itens_teste.csv", "r")) == TRUE) {
 	
 	$cont = 0;
 	
