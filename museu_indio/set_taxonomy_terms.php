@@ -13,10 +13,6 @@ $termsRepo = \Tainacan\Repositories\Terms::get_instance();
 $taxonomyRepo = \Tainacan\Repositories\Taxonomies::get_instance();
 
 
-#Getting the Colletion
-$collection = $collectionsRepo->fetch(['name' => 'Museu do Índio'], 'OBJECT');
-$collection = $collection[0];
-
 #Getting Taxonomy
 $taxonomy = $taxonomyRepo->fetch(['name' => 'Classificação 2'], 'OBJECT');
 $taxonomy = $taxonomy[0];
