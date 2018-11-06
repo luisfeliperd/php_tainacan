@@ -1,5 +1,3 @@
-#OBS. ALTERAR A EXIBIÇÃO DOS METADADOS PARA NUNCA MOSTRAR.
-
 <?php
 #Connecting with Wordpress:
 $_SERVER['SERVER_PROTOCOL'] = "HTTP/1.1";
@@ -9,7 +7,7 @@ define( 'WP_USE_THEMES', false );
 define( 'SHORTINIT', false );
 
 #Path of wp
-require('/var/ww/html/wordpress/wp-blog-header.php');
+require('/var/www/html/wp-blog-header.php');
 
 $collectionsRepo = \Tainacan\Repositories\Collections::get_instance();
 $metadataRepo = \Tainacan\Repositories\Metadata::get_instance();
