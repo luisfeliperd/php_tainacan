@@ -6,7 +6,7 @@ $_SERVER['REQUEST_METHOD'] = "GET";
 
 define( 'WP_USE_THEMES', false );
 define( 'SHORTINIT', false );
-require( 'C:\wamp\www\wordpress\wp-blog-header.php' );
+require('/var/www/html/wordpress/wp-blog-header.php'); #Diretório do Wordpress
 
 #Generating object instances for Collection, Metadata, Items, and Item_Metadata
 $collectionsRepo = \Tainacan\Repositories\Collections::get_instance();
