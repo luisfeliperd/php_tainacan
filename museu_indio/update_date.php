@@ -25,8 +25,8 @@ $term_id = $term->term_taxonomy_id;
 
 global $wpdb;
 
-$query = "UPDATE $wpdb->posts SET post_date = DATE_SUB(post_date, INTERVAL 1 DAY),
-	post_date_gmt = DATE_SUB(post_date_gmt, INTERVAL 1 DAY)
+$query = "UPDATE $wpdb->posts SET post_date = DATE_ADD(post_date, INTERVAL 1 DAY),
+	post_date_gmt = DATE_SUB(post_date_gmt, INTERVAL 2 DAYS)
 	WHERE ID IN (
 		SELECT object_id FROM $wpdb->term_relationships WHERE 
 			term_taxonomy_id = $term_id 
